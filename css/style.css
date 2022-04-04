@@ -1,0 +1,123 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    color: rgb(44, 166, 170);
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    color: rgb(44, 166, 170);
+    text-decoration: none;
+}
+body{
+    background-color: rgb(223, 255, 214);
+    box-sizing: border-box;
+}
+/* HEADER */
+#header{
+    background: linear-gradient(to right, rgb(187, 255, 93), rgb(255, 195, 206));
+    grid-area: header;
+}
+.buscador{
+    width: 8rem;
+    height: 1.5rem;
+    border-style: none;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+.logoDesktop{
+    width: 12rem;
+}
+/* NAV */
+#nav{
+    background: linear-gradient(to right, rgb(187, 255, 93), rgb(255, 195, 206));
+    margin-bottom: 1rem;
+    grid-area: nav;
+}
+.logoMobile{
+    width: 4rem;
+}
+/* MAIN */
+#main{
+    grid-area: main;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+	flex-wrap: wrap;
+	margin: 1rem;
+}
+article{
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+}
+article img{
+    width: 12rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+}
+article button{
+    background: rgb(157, 213, 79);
+    color: white;
+    border-style: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    transition: 1s;
+    transition-timing-function: ease;
+}
+article button:hover{
+    background: rgb(255, 195, 206);
+}
+/* ASIDE */
+#aside{
+    grid-area: aside;
+}
+/* FOOTER */
+#footer{
+    background: linear-gradient(to right, rgb(187, 255, 93), rgb(255, 195, 206));
+    font-size: 0.8rem;
+    grid-area: footer;
+}
+footer div{
+    display: inline-block;
+}
+footer div a:hover{
+    text-decoration: underline;
+}
+footer h4{
+    font-size: 1rem;
+}
+footer li{
+    text-align: left;
+}
+.contenedorProductos{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "aside main"
+    "footer footer";
+}
+/* BREAKPOINT TABLET */
+@media only screen and (max-width: 768px){
+    .contenedor, .contenedorProductos{
+        display: grid;
+        grid-template-columns: 15% 85%;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+        "nav nav"
+        "main main"
+        "footer footer";
+    }
+    aside{
+        display: none;
+    }
+}
+
+
+
