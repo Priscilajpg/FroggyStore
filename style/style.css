@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  text-align: center;
+  list-style: none;
+  color: #2ca6aa;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+#header {
+  grid-area: header;
+  background: -webkit-gradient(linear, left top, right top, from(#bbff5d), to(#ffc3ce));
+  background: linear-gradient(to right, #bbff5d, #ffc3ce);
+}
+
+#header .buscador {
+  border-style: none;
+  width: 10rem;
+}
+
+#header .logoDesktop {
+  width: 15rem;
+}
+
+#nav {
+  grid-area: nav;
+  background-image: -webkit-gradient(linear, left top, right top, from(#bbff5d), to(#ffc3ce));
+  background-image: linear-gradient(to right, #bbff5d, #ffc3ce);
+  margin-bottom: 1rem;
+}
+
+#nav .logoBuscadorMobile {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+#nav a img {
+  width: 5rem;
+}
+
+#nav input {
+  border-style: none;
+  width: 10rem;
+  margin: 2rem;
+}
+
+#main {
+  grid-area: main;
+  margin: 1rem 5rem;
+}
+
+#main h1 {
+  margin: 1rem 0rem;
+}
+
+#main section article img {
+  width: 15rem;
+  -webkit-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+aside {
+  grid-area: aside;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+aside li {
+  text-align: left;
+  position: relative;
+  top: 5rem;
+}
+
+main button {
+  border-style: none;
+  border-radius: 0.3rem;
+  background-color: #9dd54f;
+  height: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+main button:hover {
+  background-color: #ffc3ce;
+}
+
+#footer {
+  grid-area: footer;
+  background: -webkit-gradient(linear, left top, right top, from(#bbff5d), to(#ffc3ce));
+  background: linear-gradient(to right, #bbff5d, #ffc3ce);
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+#footer div {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#footer div li {
+  text-align: left;
+}
+
+#footer div li h4 {
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+#footer div li a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  aside {
+    display: none;
+  }
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) {
+  .contenedor--productos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 15% 85%;
+        grid-template-columns: 15% 85%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "header header" "nav nav" "aside main" "footer footer";
+  }
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/*# sourceMappingURL=style.css.map */

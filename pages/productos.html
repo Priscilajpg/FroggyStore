@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <link rel="icon" href="../img/icon.png">
     <title>Productos - Froggy Store</title>
 </head>
-<body class="contenedor">
+<body class="contenedor--productos">
     <!-- HEADER -->
     <header id="header">
 	    <div class="d-none d-md-flex justify-content-center align-items-center">
@@ -29,24 +29,27 @@
         </div>
     </header>
     <!-- NAV -->
-    <nav id="nav" class="navbar navbar-expand-md navbar-light">
-        <a class="navbar-brand d-md-none" href="index.html"><img class="logoMobile" src="../img/logoMobileTablet.png"></a>
-        <form class="d-md-none">
-            <input class="buscadorMobile" type="text" placeholder="Buscar...">
-        </form>
+    <nav id="nav" class="navbar-expand-md navbar-light">
+        <div class="logoBuscadorMobile">
+            <a class="navbar-brand d-md-none" href="../index.html"><img class="logoMobile" src="../img/logoMobileTablet.png"></a>
+            <input type="text" placeholder="Buscar..." class="d-md-none">
+        </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class=" nav-item">
-                    <a class="nav-link active" href="../index.html">Inicio</a>
+                    <a class="nav-link" href="../index.html">Inicio</a>
                 </li>
                 <li class=" nav-item">
-                    <a class="nav-link" href="productos.html">Productos</a>
+                    <a class="nav-link active" href="productos.html">Productos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="preguntas_frecuentes.html">FAQ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contacto.html">Contacto</a>
@@ -100,28 +103,83 @@
                 <button>Agregar al carrito</button>
             </article>
             <article>
-                <img src="../img/productos/llavero_flor.png" alt="Llavero flor">
+                <img src="../img/productos/llavero_arcoiris.jpg" alt="Llavero arcoiris">
+                <p>Llavero arcoiris<br> $500</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <img src="../img/productos/llavero_flor.jpg" alt="Llavero flor">
                 <p>Llavero flor<br> $500</p>
                 <button>Agregar al carrito</button>
             </article>
             <article>
-                <img src="../img/productos/llavero_komasan.png" alt="Llavero Komasan">
+                <img src="../img/productos/llavero_froggy.jpg" alt="Llavero Froggy">
+                <p>Llavero Froggy<br> $500</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <img src="../img/productos/llavero_komasan.jpg" alt="Llavero Komasan">
                 <p>Llavero Komasan<br> $500</p>
                 <button>Agregar al carrito</button>
             </article>
             <article>
-                <img src="../img/productos/llavero_sylveon.png" alt="Llavero Sylveon">
+                <img src="../img/productos/llavero_jibanyan.jpg" alt="Llavero Jibanyan">
+                <p>Llavero Jibanyan<br> $500</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <img src="../img/productos/llavero_sylveon.jpg" alt="Llavero Sylveon">
                 <p>Llavero Sylveon<br> $500</p>
                 <button>Agregar al carrito</button>
             </article>
             <article>
-                <img src="../img/productos/taza_arcoiris.png" alt="Taza Arcoiris">
+                <img src="../img/productos/llavero_togepi.jpg" alt="Llavero Togepi">
+                <p>Llavero Togepi<br> $500</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <img src="../img/productos/llavero_clefairy.jpg" alt="Llavero Clefairy">
+                <p>Llavero Clefairy<br> $500</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <img src="../img/productos/taza_arcoiris.jpg" alt="Taza Arcoiris">
                 <p>Taza Arcoiris<br> $1000</p>
                 <button>Agregar al carrito</button>
             </article>
             <article>
-                <img src="../img/productos/taza_togepi.png" alt="Taza Togepi">
+                <img src="../img/productos/taza_flor.jpg" alt="Taza flor">
+                <p>Taza flor<br> $1000</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <img src="../img/productos/taza_froggy.jpg" alt="Taza Froggy">
+                <p>Taza Froggy<br> $1000</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <img src="../img/productos/taza_jibanyan.jpg" alt="Taza Jibanyan">
+                <p>Taza Jibanyan<br> $1000</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <img src="../img/productos/taza_komasan.jpg" alt="Taza Komasan">
+                <p>Taza Komasan<br> $1000</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <img src="../img/productos/taza_sylveon.jpg" alt="Taza Sylveon">
+                <p>Taza Sylveon<br> $1000</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <img src="../img/productos/taza_togepi.jpg" alt="Taza Togepi">
                 <p>Taza Togepi<br> $1000</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <img src="../img/productos/taza_clefairy.jpg" alt="Taza Clefairy">
+                <p>Taza Clefairy<br> $1000</p>
                 <button>Agregar al carrito</button>
             </article>
         </section>
