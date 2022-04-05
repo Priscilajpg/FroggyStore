@@ -6,6 +6,7 @@
         margin: 1rem 0rem;
     }
     section{
+        @include flex (space-around, center, wrap);
         article{
             img{
                 width: 15rem;
