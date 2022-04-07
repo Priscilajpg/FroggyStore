@@ -1,7 +1,7 @@
 //FOOTER---------------------------------------------------------------------------------------------
 #footer{
     grid-area: footer;
-    background: $degradado;
+    background: map-get($map: $colores, $key: 'degradado');
     margin-top: 1rem;
     padding: 0.5rem;
     div{

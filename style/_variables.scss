@@ -1,8 +1,10 @@
 // VARIABLES ----------------------------------------------------------------------
-//colores
-$verde:rgb(157, 213, 79);
-$rosa: rgb(255, 195, 206);
-$degradado: linear-gradient(to right, rgb(187, 255, 93), rgb(255, 195, 206));
+$colores: (
+    'rosa': rgb(255, 195, 206),
+    'verde': rgb(157, 213, 79),
+    'degradado': linear-gradient(to right, rgb(187, 255, 93), rgb(255, 195, 206)),
+    'degradado2': linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)
+);
 
 @mixin flex ($justify, $align, $wrap) {
     display: flex;

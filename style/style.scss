@@ -1,7 +1,10 @@
 // STYLE ----------------------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Mali&family=Quicksand&display=swap');
+
 *{
     padding: 0%;
     margin: 0%;
+    font-family: 'Quicksand', sans-serif;
     text-align: center;
     list-style: none;
     color: rgb(44, 166, 170);
@@ -12,7 +15,7 @@ body{
 }
 
 @import "variables";
-@import "fonts";
+@import "tipografia";
 @import "headerNav";
 @import "main";
 @import "buttons";

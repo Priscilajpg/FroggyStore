@@ -1,7 +1,7 @@
 // HEADER---------------------------------------------------------------------------------------------
 header{
     grid-area: header;
-    background: $degradado;
+    background: map-get($map: $colores, $key: 'degradado');
     div{
         .buscador{
             border-style: none;
@@ -16,7 +16,7 @@ header{
 // NAVBAR---------------------------------------------------------------------------------------------
 nav{
     grid-area: nav;
-    background-image: $degradado;
+    background: map-get($map: $colores, $key: 'degradado');
     margin-bottom: 1rem;
     div{
         .logoBuscadorMobile{
