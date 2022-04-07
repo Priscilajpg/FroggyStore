@@ -8,13 +8,16 @@
         "footer footer"
         );
     }
-    .contenedor--2columnas{
-        @include grid (25% 50% 25%, auto,
-        "header header header"
-        "nav nav nav"
-        ". main ."
-        "footer footer footer"
-        );
+    .contenedor--contacto{
+        article{
+            label{
+                display: block;
+            }
+            iframe{
+                width: 25rem;
+                height: 25rem;
+            }
+        }
     }
 }
 

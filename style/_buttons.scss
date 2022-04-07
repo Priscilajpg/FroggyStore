@@ -1,6 +1,6 @@
 // BOTONES--------------------------------------------------------------------------------------------------
 main{
-    button{
+    button, .buttons{
         border-style: none;
         border-radius: 0.3rem;
         background-color: map-get($map: $colores, $key: 'verde');

@@ -18,10 +18,10 @@ nav{
     grid-area: nav;
     background: map-get($map: $colores, $key: 'degradado');
     margin-bottom: 1rem;
+    .navMobile{
+        @include flex (space-between, center, nowrap);
+    }
     div{
-        .logoBuscadorMobile{
-            @include flex (space-between, center, nowrap);
-        }
         a{
             img{
                 width: 5rem;

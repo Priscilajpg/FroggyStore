@@ -6,8 +6,9 @@ main{
         margin: 1rem 0rem;
     }
     section{
-        @include flex (space-between, center, wrap);
+        @include flex (center, flex-start, wrap);
         article{
+            padding: 0.5rem 0rem;
             img{
                 width: 15rem;
                 box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
@@ -17,17 +18,11 @@ main{
             .tablaTalles{
                 width: 20rem;
             }
-            ol {
+            ol{
                 li{
                     list-style: decimal;
                 }
             }
-        }
-    }
-    .FAQ{
-        @include flex (center, center, wrap);
-        p{
-            text-align: left;
         }
     }
 }

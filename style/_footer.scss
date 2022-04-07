@@ -1,5 +1,6 @@
 //FOOTER---------------------------------------------------------------------------------------------
-#footer{
+footer{
+    @include flex (center, flex-start, wrap);
     grid-area: footer;
     background: map-get($map: $colores, $key: 'degradado');
     margin-top: 1rem;
@@ -10,11 +11,13 @@
             text-align: left;
             h4{
                 text-align: left;
-                font-size: 1.2rem;
             }
             a{
                 text-decoration: none;
             }
         }
+    }
+    p{
+        display: block;
     }
 }

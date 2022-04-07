@@ -12,6 +12,10 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   font-weight: 600;
   background-image: linear-gradient(to right, #16d6d9, #96cc29);
@@ -19,6 +23,19 @@ h1 {
   -webkit-background-clip: text;
   background-clip: text;
   position: relative;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+li a {
+  text-decoration: none;
+}
+li a:hover {
+  background-color: rgba(255, 195, 206, 0.5);
+  border-radius: 0.25rem;
 }
 
 header {
@@ -38,7 +55,7 @@ nav {
   background: linear-gradient(to right, rgb(187, 255, 93), rgb(255, 195, 206));
   margin-bottom: 1rem;
 }
-nav div .logoBuscadorMobile {
+nav .navMobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,9 +79,12 @@ main h1 {
 }
 main section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
+}
+main section article {
+  padding: 0.5rem 0rem;
 }
 main section article img {
   width: 15rem;
@@ -77,15 +97,6 @@ main section article .tablaTalles {
 }
 main section article ol li {
   list-style: decimal;
-}
-main .FAQ {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-main .FAQ p {
-  text-align: left;
 }
 
 aside {
@@ -101,7 +112,7 @@ aside li {
   top: 5rem;
 }
 
-main button {
+main button, main .buttons {
   border-style: none;
   border-radius: 0.3rem;
   background-color: rgb(157, 213, 79);
@@ -114,24 +125,30 @@ main button:hover {
   background-color: rgb(255, 195, 206);
 }
 
-#footer {
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
   grid-area: footer;
   background: linear-gradient(to right, rgb(187, 255, 93), rgb(255, 195, 206));
   margin-top: 1rem;
   padding: 0.5rem;
 }
-#footer div {
+footer div {
   display: inline-block;
 }
-#footer div li {
+footer div li {
   text-align: left;
 }
-#footer div li h4 {
+footer div li h4 {
   text-align: left;
-  font-size: 1.2rem;
 }
-#footer div li a {
+footer div li a {
   text-decoration: none;
+}
+footer p {
+  display: block;
 }
 
 @media only screen and (min-width: 768px) {
@@ -142,11 +159,12 @@ main button:hover {
     grid-template-areas: "header header" "nav nav" "aside main" "footer footer";
   }
 
-  .contenedor--2columnas {
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: auto;
-    grid-template-areas: "header header header" "nav nav nav" ". main ." "footer footer footer";
+  .contenedor--contacto article label {
+    display: block;
+  }
+  .contenedor--contacto article iframe {
+    width: 25rem;
+    height: 25rem;
   }
 }
 @media only screen and (max-width: 768px) {
