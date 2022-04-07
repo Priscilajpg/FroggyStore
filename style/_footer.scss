@@ -5,7 +5,7 @@
     margin-top: 1rem;
     padding: 0.5rem;
     div{
-        @include flex (center, flex-start, wrap);
+        display: inline-block;
         li{
             text-align: left;
             h4{

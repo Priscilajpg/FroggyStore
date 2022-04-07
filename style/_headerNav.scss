@@ -1,32 +1,37 @@
-//HEADER---------------------------------------------------------------------------------------------
-#header{
+// HEADER---------------------------------------------------------------------------------------------
+header{
     grid-area: header;
     background: $degradado;
-    .buscador{
-        border-style: none;
-        width: 10rem;
-    }
-    .logoDesktop{
-        width: 15rem;
+    div{
+        .buscador{
+            border-style: none;
+            width: 10rem;
+        }
+        .logoDesktop{
+            width: 15rem;
+        }
     }
 }
 
-//NAVBAR---------------------------------------------------------------------------------------------
-#nav{
+// NAVBAR---------------------------------------------------------------------------------------------
+nav{
     grid-area: nav;
     background-image: $degradado;
     margin-bottom: 1rem;
-    .logoBuscadorMobile{
-        @include flex (space-between, center, nowrap);
-    }
-    a{
-        img{
-            width: 5rem;
+    div{
+        .logoBuscadorMobile{
+            @include flex (space-between, center, nowrap);
+        }
+        a{
+            img{
+                width: 5rem;
+            }
+        }
+        input{
+            border-style: none;
+            width: 10rem;
+            margin: 2rem;
         }
     }
-    input{
-        border-style: none;
-        width: 10rem;
-        margin: 2rem;
-    }
+    
 }

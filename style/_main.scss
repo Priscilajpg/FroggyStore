@@ -1,12 +1,12 @@
-//TODAS LAS PANTALLAS---------------------------------------------------------------------------------------------
-#main{
+// MAIN TODAS LAS PANTALLAS---------------------------------------------------------------------------------------------
+main{
     grid-area: main;
     margin: 1rem 5rem;
     h1{
         margin: 1rem 0rem;
     }
     section{
-        @include flex (space-around, center, wrap);
+        @include flex (space-between, center, wrap);
         article{
             img{
                 width: 15rem;
@@ -14,6 +14,20 @@
                 margin: 0.5rem;
                 border-radius: 0.5rem;
             }
+            .tablaTalles{
+                width: 20rem;
+            }
+            ol {
+                li{
+                    list-style: decimal;
+                }
+            }
+        }
+    }
+    .FAQ{
+        @include flex (center, center, wrap);
+        p{
+            text-align: left;
         }
     }
 }
