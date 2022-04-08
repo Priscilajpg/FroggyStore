@@ -1,13 +1,20 @@
 // TIPOGRAFIA -----------------------------------------------------------------------
 h1{
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: map-get($map: $colores, $key: 'verde');
+}
+h2{
+    font-size: 1.4rem;
     font-weight: 600;
-    background-image:linear-gradient(to right, #16d6d9, #96cc29); 
-    color:rgba(0, 0, 0, 0); 
-    -webkit-background-clip:text; 
-    background-clip:text; position:relative;
+    margin: 0.2rem;
+}
+h3{
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 h4{
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
