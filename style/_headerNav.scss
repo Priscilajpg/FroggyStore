@@ -4,7 +4,6 @@ header{
     background: map-get($map: $colores, $key: 'degradado');
     div{
         .buscador{
-            border-style: none;
             width: 10rem;
         }
         .logoDesktop{
@@ -20,8 +19,5 @@ nav{
     background: map-get($map: $colores, $key: 'degradado');
     margin: 1rem;
     padding: 0.5rem 0rem;
-    border-radius: 0.5rem;
-    input{
-        border-style: none;
-    }    
+    border-radius: 0.5rem;   
 }

@@ -1,23 +1,22 @@
 //FOOTER---------------------------------------------------------------------------------------------
 footer{
-    @include flex (center, flex-start, wrap);
     grid-area: footer;
+    @include flex (center, flex-start, wrap);
     background: map-get($map: $colores, $key: 'degradado');
     margin-top: 1rem;
     padding: 0.5rem;
+    position: relative;
     div{
-        display: inline-block;
+        h4{
+            text-align: center;
+        }
         li{
             text-align: left;
-            h4{
-                text-align: left;
-            }
-            a{
-                text-decoration: none;
-            }
         }
     }
     p{
-        display: block;
+        position: absolute;
+        bottom: 0;
+        margin: 0.2rem;
     }
 }

@@ -16,19 +16,13 @@
         "footer footer footer footer"
         );
     }
-    .contenedor--contacto{
+    .contenedor--2columnas{
         article{
-            label{
-                display: block;
-            }
             iframe{
                 width: 25rem;
                 height: 25rem;
             }
         }
-    }
-    .tablaTalles{
-        width: 25rem;
     }
 }
 
@@ -42,6 +36,17 @@
         input{
             width: 6rem;
             height: 2rem;
+        }
+    }
+    .contenedor--contacto{
+        article{
+            label{
+                display: block;
+            }
+            iframe{
+                width: 25rem;
+                height: 25rem;
+            }
         }
     }
     aside{

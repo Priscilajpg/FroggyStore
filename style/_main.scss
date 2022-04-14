@@ -1,8 +1,9 @@
 // MAIN---------------------------------------------------------------------------------------------
 main{
     grid-area: main;
+    // PANTALLA INDEX Y PRODUCTOS ------------------------------------------------------------------------
     section{
-        @include flex (space-evenly, flex-start, wrap);
+        @include flex (center,  flex-start, wrap);
         article{
             padding: 0.5rem;
             img{
@@ -11,26 +12,76 @@ main{
                 box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
                 border-radius: 0.5rem;
             }
-            .tablaTalles{
-                width: 100%;
+        }
+    }
+    // BOTONES----------------------------------------------------------------
+    button{
+        border-style: none;
+        border-radius: 0.3rem;
+        background-color: map-get($map: $colores, $key: 'verde2');
+        height: 2rem;
+        padding: 0rem 0.5rem;
+        margin-bottom: 1rem;
+        transition: 1s;
+        transition-timing-function: ease;
+    }
+    button:hover{
+        background-color: map-get($map: $colores, $key: 'rosa')
+    }
+    // PANTALLA CON 2 COLUMNAS ------------------------------------------------------------
+    .fila{
+        display: flex;
+        .columna{
+            flex: 50%;
+            margin: 1rem;
+            p{
+                text-align: left;
+            }
+            table{
+                margin-left: auto;
+                margin-right: auto;
+                th{
+                    background-color: map-get($map: $colores, $key: 'rosa');
+                    padding: 0.5rem 1rem;
+                }
+                tr:nth-child(even) {
+                    background-color: map-get($map: $colores, $key: 'rosa2');
+                }
             }
             ol{
                 li{
                     list-style: decimal;
-                }
-            }
-            .botonEnviar{
-                @extend button;
-                width: 6rem;
-            }
-            .formulario{
-                div{
-                    border-style: none;
+                    text-align: left;
                 }
             }
         }
     }
+    // FORMULARIOS --------------------------------------------------------------------------
+    form{
+        div{
+            label{
+                display: block;
+            }
+            input{
+                height: 2rem;
+                border-color: map-get($map: $colores, $key: 'rosa');
+                border-style: solid;
+                margin: 0.5rem;
+            }
+            textarea{
+                @extend input;
+                height: 10rem;
+                width: 20rem;
+            }
+        }
+        input[type="submit"]{
+            @extend button;
+            width: 6rem;
+        }
+    }
+    
 }
+
 //ASIDE-------------------------------------------------------------------------------
 aside{
     grid-area: aside;

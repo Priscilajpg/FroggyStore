@@ -1,19 +1,26 @@
 // TIPOGRAFIA -----------------------------------------------------------------------
 h1{
+    font-family: 'Quicksand', sans-serif;
     font-size: 2.2rem;
+    margin: 0.5rem;
     font-weight: 700;
     color: map-get($map: $colores, $key: 'verde');
 }
 h2{
-    font-size: 1.4rem;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
     font-weight: 600;
-    margin: 0.2rem;
+    margin-top: 0.5rem;
+    color: map-get($map: $colores, $key: 'verde2');
 }
 h3{
+    font-family: 'Quicksand', sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
+    color: map-get($map: $colores, $key: 'naranja');
 }
 h4{
+    font-family: 'Quicksand', sans-serif;
     font-size: 1rem;
     font-weight: 600;
 }
