@@ -2,7 +2,7 @@
 footer{
     grid-area: footer;
     @include flex (center, flex-start, wrap);
-    background: map-get($map: $colores, $key: 'degradado');
+    background: map-get($map: $colores, $key: 'verde2');
     margin-top: 1rem;
     padding: 0.5rem;
     position: relative;
@@ -12,10 +12,15 @@ footer{
         }
         li{
             text-align: left;
+            color: rgb(76, 99, 36);
+            a{
+                color: rgb(36, 58, 99);
+            }
         }
     }
     p{
         position: absolute;
+        color: black;
         bottom: 0;
         margin: 0.2rem;
     }

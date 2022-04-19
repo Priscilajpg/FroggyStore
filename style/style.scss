@@ -4,18 +4,39 @@
 *{
     padding: 0%;
     margin: 0%;
+    text-decoration: none;
     text-align: center;
     list-style: none;
-    color: rgb(44, 166, 170);
     border-style: none;
+    color: white;
 }
 
 body{
     box-sizing: border-box;
-    background-color: rgb(236, 255, 231);
+    background-image: linear-gradient(to right, rgb(187, 255, 93), rgb(255, 195, 206));
+    animation: transitionBody 1s;
 }
+
+@keyframes transitionBody {
+    from{
+        opacity: 0;
+        transform: rotateY(-15deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}
+
 a{
     text-decoration: none;
+    color: rgb(95, 131, 211);
+}
+
+a{
+    svg{
+        color: white;
+    }
 }
 
 @import "variables";

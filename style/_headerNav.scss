@@ -2,22 +2,12 @@
 header{
     grid-area: header;
     background: map-get($map: $colores, $key: 'degradado');
-    div{
-        .buscador{
-            width: 10rem;
-        }
-        .logoDesktop{
-            width: 15rem;
-        }
-    }
 }
 
 // NAVBAR---------------------------------------------------------------------------------------------
 nav{
     grid-area: nav;
-    @include flex (center, center, wrap);
-    background: map-get($map: $colores, $key: 'degradado');
-    margin: 1rem;
+    @include flex (space-evenly, center, wrap);
+    background-color: white;
     padding: 0.5rem 0rem;
-    border-radius: 0.5rem;   
 }

@@ -2,19 +2,36 @@
 * {
   padding: 0%;
   margin: 0%;
+  text-decoration: none;
   text-align: center;
   list-style: none;
-  color: rgb(44, 166, 170);
   border-style: none;
+  color: white;
 }
 
 body {
   box-sizing: border-box;
-  background-color: rgb(236, 255, 231);
+  background-image: linear-gradient(to right, rgb(187, 255, 93), rgb(255, 195, 206));
+  animation: transitionBody 1s;
 }
 
+@keyframes transitionBody {
+  from {
+    opacity: 0;
+    transform: rotateY(-15deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(0);
+  }
+}
 a {
   text-decoration: none;
+  color: rgb(95, 131, 211);
+}
+
+a svg {
+  color: white;
 }
 
 h1 {
@@ -22,7 +39,7 @@ h1 {
   font-size: 2.2rem;
   margin: 0.5rem;
   font-weight: 700;
-  color: rgb(133, 204, 100);
+  color: rgb(96, 172, 62);
 }
 
 h2 {
@@ -30,14 +47,14 @@ h2 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-top: 0.5rem;
-  color: rgb(172, 224, 99);
+  color: rgb(147, 199, 75);
 }
 
 h3 {
   font-family: "Quicksand", sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  color: rgb(214, 167, 112);
+  color: rgb(236, 171, 96);
 }
 
 h4 {
@@ -50,31 +67,27 @@ li a {
   text-decoration: none;
 }
 li a:hover {
-  background-color: rgba(255, 171, 187, 0.25);
+  background-color: rgb(231, 172, 182);
   border-radius: 0.25rem;
+}
+
+p, b, li, td, label {
+  color: grey;
 }
 
 header {
   grid-area: header;
   background: linear-gradient(to right, rgb(187, 255, 93), rgb(255, 195, 206));
 }
-header div .buscador {
-  width: 10rem;
-}
-header div .logoDesktop {
-  width: 15rem;
-}
 
 nav {
   grid-area: nav;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  background: linear-gradient(to right, rgb(187, 255, 93), rgb(255, 195, 206));
-  margin: 1rem;
+  background-color: white;
   padding: 0.5rem 0rem;
-  border-radius: 0.5rem;
 }
 
 main {
@@ -87,58 +100,66 @@ main section {
   flex-wrap: wrap;
 }
 main section article {
+  background-color: white;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  margin: 0.5rem;
   padding: 0.5rem;
 }
 main section article img {
   width: 15rem;
-  margin: 0.5rem;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem;
   border-radius: 0.5rem;
 }
 main button, main form input[type=submit], main form div textarea[type=submit] {
   border-style: none;
   border-radius: 0.3rem;
-  background-color: rgb(172, 224, 99);
+  background-color: rgb(147, 199, 75);
   height: 2rem;
   padding: 0rem 0.5rem;
-  margin-bottom: 1rem;
   transition: 1s;
   transition-timing-function: ease;
 }
 main button:hover, main form input[type=submit]:hover, main form div textarea[type=submit]:hover {
-  background-color: rgb(255, 195, 206);
+  background-color: rgb(240, 205, 205);
 }
-main .fila {
-  display: flex;
+main .cajaSuperior {
+  background-color: white;
+  border-radius: 0.2rem;
 }
-main .fila .columna {
-  flex: 50%;
-  margin: 1rem;
+main .cajaSuperior h4 {
+  color: rgb(236, 171, 96);
 }
-main .fila .columna p {
-  text-align: left;
+main .columna {
+  background-color: white;
+  border-radius: 0.2rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
-main .fila .columna table {
+main .columna table {
   margin-left: auto;
   margin-right: auto;
 }
-main .fila .columna table th {
-  background-color: rgb(255, 195, 206);
-  padding: 0.5rem 1rem;
+main .columna table th {
+  background-color: rgb(231, 172, 182);
 }
-main .fila .columna table tr:nth-child(even) {
-  background-color: rgba(255, 171, 187, 0.25);
+main .columna table tr:nth-child(even) {
+  background-color: rgb(240, 205, 205);
 }
-main .fila .columna ol li {
+main .columna ol li {
   list-style: decimal;
   text-align: left;
+}
+main .columna iframe {
+  height: 75%;
+  width: auto;
 }
 main form div label {
   display: block;
 }
 main form div input, main form div textarea {
   height: 2rem;
-  border-color: rgb(255, 195, 206);
+  border-color: rgb(240, 205, 205);
   border-style: solid;
   margin: 0.5rem;
 }
@@ -150,10 +171,14 @@ main form input[type=submit], main form div textarea[type=submit] {
   width: 6rem;
 }
 
+main a:link {
+  text-decoration: underline;
+}
+
 aside {
   grid-area: aside;
   width: 115%;
-  background-color: rgba(255, 171, 187, 0.25);
+  background-color: rgba(236, 145, 162, 0.514);
   border-radius: 0.5rem;
   display: flex;
   justify-content: center;
@@ -173,7 +198,7 @@ footer {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  background: linear-gradient(to right, rgb(187, 255, 93), rgb(255, 195, 206));
+  background: rgb(147, 199, 75);
   margin-top: 1rem;
   padding: 0.5rem;
   position: relative;
@@ -183,19 +208,85 @@ footer div h4 {
 }
 footer div li {
   text-align: left;
+  color: rgb(76, 99, 36);
+}
+footer div li a {
+  color: rgb(36, 58, 99);
 }
 footer p {
   position: absolute;
+  color: black;
   bottom: 0;
   margin: 0.2rem;
 }
 
+@media only screen and (max-width: 300px) {
+  nav div .logoMobile {
+    width: 2rem;
+  }
+  nav div input, nav main form div textarea, main form nav div textarea {
+    height: 2rem;
+    width: 100%;
+  }
+
+  aside {
+    display: none;
+  }
+}
+@media only screen and (min-width: 300px) {
+  nav div .logoMobile {
+    width: 4rem;
+  }
+  nav div input, nav main form div textarea, main form nav div textarea {
+    width: 6rem;
+    height: 2rem;
+  }
+
+  aside {
+    display: none;
+  }
+
+  table th {
+    padding: 0.5rem;
+  }
+}
 @media only screen and (min-width: 768px) {
   body {
     display: grid;
     grid-template-columns: 10% 80% 10%;
     grid-template-rows: auto;
+    grid-template-areas: "header header header" "nav nav nav" "main main main" "footer footer footer";
+  }
+
+  header div .buscador {
+    width: 8rem;
+  }
+  header div .logoDesktop {
+    width: 10rem;
+  }
+
+  aside {
+    display: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  body {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: auto;
     grid-template-areas: "header header header" ". nav ." ". main ." "footer footer footer";
+  }
+
+  header div .buscador {
+    width: 6rem;
+  }
+  header div .logoDesktop {
+    width: 10rem;
+  }
+
+  nav {
+    margin: 1rem;
+    border-radius: 0.5rem;
   }
 
   .contenedor--productos {
@@ -205,57 +296,18 @@ footer p {
     grid-template-areas: "header header header header" ". nav nav ." ". aside main ." "footer footer footer footer";
   }
 
-  .contenedor--2columnas article iframe {
-    width: 25rem;
-    height: 25rem;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .navMobile {
+  aside {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .navMobile .logoMobile {
-    width: 4rem;
-  }
-  .navMobile input, .navMobile main form div textarea, main form div .navMobile textarea {
-    width: 6rem;
-    height: 2rem;
   }
 
-  .contenedor--contacto article label {
-    display: block;
+  .fila {
+    display: flex;
   }
-  .contenedor--contacto article iframe {
-    width: 25rem;
-    height: 25rem;
+  .fila .columna {
+    flex: 50%;
   }
-
-  aside {
-    display: none;
-  }
-
-  .tablaTalles {
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 273px) {
-  .navMobile .logoMobile {
-    width: 2rem;
-  }
-  .navMobile input, .navMobile main form div textarea, main form div .navMobile textarea {
-    width: 3rem;
-    height: 2rem;
-  }
-
-  aside {
-    display: none;
-  }
-
-  .tablaTalles {
-    width: 100%;
+  .fila .columna th {
+    padding: 0.25rem 1rem;
   }
 }
 

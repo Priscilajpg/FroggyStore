@@ -1,5 +1,71 @@
-// VISTA DESKTOP---------------------------------------------------------------------------------
-@media only screen and (min-width:768px){
+// VISTA MINI-MOBILE-------------------------------------------------------------------------------
+@media only screen and (max-width:300px) {
+    nav{
+        div{
+            .logoMobile{
+                width: 2rem;
+            }
+            input{
+                height: 2rem;
+                width: 100%;
+            }
+        }
+    }
+    aside{
+        display: none;
+    }
+}
+
+// VISTA MOBILE-------------------------------------------------------------------------------
+@media only screen and (min-width: 300px){
+    nav{
+        div{
+            .logoMobile{
+                width: 4rem;
+            }
+            input{
+                width: 6rem;
+                height: 2rem;
+            }
+        }
+    }
+    aside{
+        display: none;
+    }
+    table{
+        th{
+            padding: 0.5rem;
+        }
+    }
+}
+
+// VISTA TABLET -------------------------------------------------------------------------------
+@media only screen and (min-width: 768px){
+	body{
+        @include grid (10% 80% 10%, auto, 
+        "header header header"
+        "nav nav nav"
+        "main main main"
+        "footer footer footer"
+        );
+    }
+    header{
+        div{
+            .buscador{
+                width: 8rem;
+            }
+            .logoDesktop{
+                width: 10rem;
+            }
+        }
+    }
+    aside{
+        display: none;
+    }
+}
+
+// VISTA DESKTOP ------------------------------------------------------------------------------
+@media only screen and (min-width: 992px){
     body{
         @include grid (10% 80% 10%, auto, 
         "header header header"
@@ -7,6 +73,20 @@
         ". main ."
         "footer footer footer"
         );
+    }
+    header{
+        div{
+            .buscador{
+                width: 6rem;
+            }
+            .logoDesktop{
+                width: 10rem;
+            }
+        }
+    }
+    nav{
+        margin: 1rem;
+        border-radius: 0.5rem;  
     }
     .contenedor--productos{
         @include grid (10% 10% 70% 10%, auto, 
@@ -16,64 +96,17 @@
         "footer footer footer footer"
         );
     }
-    .contenedor--2columnas{
-        article{
-            iframe{
-                width: 25rem;
-                height: 25rem;
-            }
-        }
-    }
-}
-
-// VISTA MOBILE-------------------------------------------------------------------------------
-@media only screen and (max-width:768px){
-    .navMobile{
-        @include flex (center, center, wrap);
-        .logoMobile{
-            width: 4rem;
-        }
-        input{
-            width: 6rem;
-            height: 2rem;
-        }
-    }
-    .contenedor--contacto{
-        article{
-            label{
-                display: block;
-            }
-            iframe{
-                width: 25rem;
-                height: 25rem;
-            }
-        }
-    }
     aside{
-        display: none;
+        display: flex;
     }
-    .tablaTalles{
-        width: 100%;
-    }
-}
-
-
-// VISTA MINI- MOBILE-------------------------------------------------------------------------------
-@media only screen and (max-width:273px){
-    .navMobile{
-        .logoMobile{
-            width: 2rem;
-        }
-        input{
-            width: 3rem;
-            height: 2rem;
+    // PANTALLA CON 2 COLUMNAS ------------------------------------------------------------
+    .fila{
+        display: flex;
+        .columna{
+            flex: 50%;
+            th{
+                padding: 0.25rem 1rem;
+            }
         }
     }
-    aside{
-        display: none;
-    }
-    .tablaTalles{
-        width: 100%;
-    }
 }
-
