@@ -6,7 +6,6 @@
   text-align: center;
   list-style: none;
   border-style: none;
-  color: white;
 }
 
 body {
@@ -18,11 +17,10 @@ body {
 @keyframes transitionBody {
   from {
     opacity: 0;
-    transform: rotateY(-15deg);
+    transition-timing-function: ease-in;
   }
   to {
     opacity: 1;
-    transform: rotateY(0);
   }
 }
 a {
@@ -30,44 +28,50 @@ a {
   color: rgb(95, 131, 211);
 }
 
-a svg {
+svg {
   color: white;
+  width: 2rem;
+  height: 2rem;
+}
+
+li svg {
+  width: 1rem;
+  height: 1rem;
 }
 
 h1 {
-  font-family: "Quicksand", sans-serif;
   font-size: 2.2rem;
-  margin: 0.5rem;
   font-weight: 700;
+  margin: 0.5rem;
+  font-family: "Quicksand", sans-serif;
   color: rgb(96, 172, 62);
 }
 
 h2 {
-  font-family: "Quicksand", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  margin-top: 0.5rem;
+  font-family: "Quicksand", sans-serif;
   color: rgb(147, 199, 75);
 }
 
 h3 {
-  font-family: "Quicksand", sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
+  font-family: "Quicksand", sans-serif;
   color: rgb(236, 171, 96);
 }
 
 h4 {
-  font-family: "Quicksand", sans-serif;
   font-size: 1rem;
   font-weight: 600;
+  font-family: "Quicksand", sans-serif;
 }
 
 li a {
   text-decoration: none;
 }
 li a:hover {
-  background-color: rgb(231, 172, 182);
+  background-color: rgb(243, 176, 187);
   border-radius: 0.25rem;
 }
 
@@ -86,12 +90,14 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  background-color: white;
+  background-color: rgb(243, 176, 187);
   padding: 0.5rem 0rem;
 }
 
 main {
   grid-area: main;
+  border-radius: 0.2rem;
+  grid-auto-columns: auto;
 }
 main section {
   display: flex;
@@ -101,74 +107,69 @@ main section {
 }
 main section article {
   background-color: white;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.25);
   border-radius: 0.5rem;
   margin: 0.5rem;
-  padding: 0.5rem;
 }
 main section article img {
-  width: 15rem;
   margin-bottom: 0.5rem;
   border-radius: 0.5rem;
 }
-main button, main form input[type=submit], main form div textarea[type=submit] {
+main button, main input[type=submit], main iframe[type=submit] {
+  background-color: rgb(147, 199, 75);
+  color: white;
+  height: 2rem;
   border-style: none;
   border-radius: 0.3rem;
-  background-color: rgb(147, 199, 75);
-  height: 2rem;
   padding: 0rem 0.5rem;
+  margin-bottom: 0.5rem;
   transition: 1s;
-  transition-timing-function: ease;
+  transition-timing-function: ease-out;
 }
-main button:hover, main form input[type=submit]:hover, main form div textarea[type=submit]:hover {
-  background-color: rgb(240, 205, 205);
+main button:hover, main input[type=submit]:hover, main iframe[type=submit]:hover {
+  background-color: rgb(252, 213, 213);
 }
-main .cajaSuperior {
-  background-color: white;
-  border-radius: 0.2rem;
+main table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-main .cajaSuperior h4 {
-  color: rgb(236, 171, 96);
+main table th {
+  background-color: rgb(243, 176, 187);
 }
-main .columna {
-  background-color: white;
-  border-radius: 0.2rem;
-  padding: 1rem;
-  margin-bottom: 1rem;
+main table tr:nth-child(even) {
+  background-color: rgb(252, 213, 213);
 }
-main .columna table {
-  margin-left: auto;
-  margin-right: auto;
-}
-main .columna table th {
-  background-color: rgb(231, 172, 182);
-}
-main .columna table tr:nth-child(even) {
-  background-color: rgb(240, 205, 205);
-}
-main .columna ol li {
+main ol li {
   list-style: decimal;
   text-align: left;
 }
-main .columna iframe {
-  height: 75%;
-  width: auto;
+main ul li svg {
+  color: rgb(252, 213, 213);
 }
-main form div label {
+main label {
   display: block;
 }
-main form div input, main form div textarea {
+main input, main iframe {
   height: 2rem;
-  border-color: rgb(240, 205, 205);
-  border-style: solid;
+  width: 80%;
   margin: 0.5rem;
+  border-color: rgb(252, 213, 213);
+  border-style: solid;
 }
-main form div textarea {
-  height: 10rem;
-  width: 20rem;
+main textarea {
+  height: 6rem;
+  width: 80%;
+  border-color: rgb(252, 213, 213);
+  border-style: solid;
 }
-main form input[type=submit], main form div textarea[type=submit] {
+main input[type=submit], main iframe[type=submit] {
   width: 6rem;
+}
+main iframe {
+  height: 50%;
+  width: 80%;
 }
 
 main a:link {
@@ -177,7 +178,8 @@ main a:link {
 
 aside {
   grid-area: aside;
-  width: 115%;
+  width: 85%;
+  height: 15%;
   background-color: rgba(236, 145, 162, 0.514);
   border-radius: 0.5rem;
   display: flex;
@@ -194,60 +196,52 @@ aside li {
 
 footer {
   grid-area: footer;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
   background: rgb(147, 199, 75);
   margin-top: 1rem;
   padding: 0.5rem;
   position: relative;
-}
-footer div h4 {
-  text-align: center;
-}
-footer div li {
-  text-align: left;
-  color: rgb(76, 99, 36);
-}
-footer div li a {
-  color: rgb(36, 58, 99);
-}
-footer p {
-  position: absolute;
-  color: black;
-  bottom: 0;
-  margin: 0.2rem;
+  color: rgb(45, 61, 18);
 }
 
-@media only screen and (max-width: 300px) {
-  nav div .logoMobile {
-    width: 2rem;
+@media only screen and (max-width: 768px) {
+  nav {
+    margin-bottom: 1rem;
   }
-  nav div input, nav main form div textarea, main form nav div textarea {
-    height: 2rem;
-    width: 100%;
+  nav div .logoMobile {
+    height: auto;
+    width: 15%;
+  }
+  nav div input, nav div main iframe, main nav div iframe {
+    height: auto;
+    width: 30%;
+    margin: 1rem;
   }
 
-  aside {
-    display: none;
+  main {
+    background-color: white;
+    border-radius: 0.2rem;
+    margin: 0.5rem;
   }
-}
-@media only screen and (min-width: 300px) {
-  nav div .logoMobile {
-    width: 4rem;
+  main section article {
+    margin: 1rem;
   }
-  nav div input, nav main form div textarea, main form nav div textarea {
-    width: 6rem;
-    height: 2rem;
+  main section article img {
+    height: auto;
+    width: 70%;
   }
 
   aside {
     display: none;
   }
 
-  table th {
-    padding: 0.5rem;
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  footer li {
+    text-align: left;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -258,6 +252,9 @@ footer p {
     grid-template-areas: "header header header" "nav nav nav" "main main main" "footer footer footer";
   }
 
+  header {
+    background-color: rgb(243, 176, 187);
+  }
   header div .buscador {
     width: 8rem;
   }
@@ -265,8 +262,57 @@ footer p {
     width: 10rem;
   }
 
+  main {
+    background-color: white;
+  }
+  main section article {
+    margin: 1rem;
+  }
+  main section article img {
+    width: 15rem;
+  }
+  main input, main iframe {
+    width: 10rem;
+  }
+  main table th {
+    padding: 0.5rem;
+  }
+  main .fila {
+    display: flex;
+  }
+  main .fila .columna {
+    flex: 50%;
+  }
+  main .fila .columna th {
+    padding: 0.25rem 1rem;
+  }
+  main .fila .verticalLine {
+    border-left: 2px dotted pink;
+    height: 450px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 50;
+  }
+
   aside {
     display: none;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  footer li {
+    text-align: left;
+  }
+  footer p {
+    position: absolute;
+    color: black;
+    bottom: 0;
+    margin: 0.2rem;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -296,18 +342,43 @@ footer p {
     grid-template-areas: "header header header header" ". nav nav ." ". aside main ." "footer footer footer footer";
   }
 
+  main section article img {
+    width: 12.5rem;
+  }
+  main input, main iframe {
+    width: 10rem;
+  }
+  main .cajaSuperior {
+    background-color: white;
+    border-radius: 0.2rem;
+  }
+  main .cajaSuperior h4 {
+    color: rgb(236, 171, 96);
+  }
+  main .columna {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
   aside {
     display: flex;
   }
 
-  .fila {
+  footer {
     display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
-  .fila .columna {
-    flex: 50%;
+  footer li {
+    text-align: left;
   }
-  .fila .columna th {
-    padding: 0.25rem 1rem;
+  footer p {
+    position: absolute;
+    color: black;
+    bottom: 0;
+    margin: 0.2rem;
   }
 }
 

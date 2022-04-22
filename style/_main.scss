@@ -1,6 +1,22 @@
+// HEADER---------------------------------------------------------------------------------------------
+header{
+    grid-area: header;
+    background: map-get($map: $colores, $key: 'degradado');
+}
+
+// NAVBAR---------------------------------------------------------------------------------------------
+nav{
+    grid-area: nav;
+    @include flex (space-evenly, center, wrap);
+    background-color: map-get($map: $colores, $key: 'rosa2');
+    padding: 0.5rem 0rem;
+}
+
 // MAIN---------------------------------------------------------------------------------------------
 main{
     grid-area: main;
+    border-radius: 0.2rem;
+    grid-auto-columns: auto;
     // PANTALLA INDEX Y PRODUCTOS ------------------------------------------------------------------------
     section{
         @include flex (center,  flex-start, wrap);
@@ -9,85 +25,73 @@ main{
             box-shadow: map-get($map: $colores, $key: 'sombra');
             border-radius: 0.5rem;
             margin: 0.5rem;
-            padding: 0.5rem;
             img{
-                width: 15rem;
                 margin-bottom: 0.5rem;
                 border-radius: 0.5rem;
             }
         }
     }
     button{
+        background-color: map-get($map: $colores, $key: 'verde2');
+        color: white;
+        height: 2rem;
         border-style: none;
         border-radius: 0.3rem;
-        background-color: map-get($map: $colores, $key: 'verde2');
-        height: 2rem;
         padding: 0rem 0.5rem;
+        margin-bottom: 0.5rem;
         transition: 1s;
-        transition-timing-function: ease;
+        transition-timing-function: ease-out;
     }
     button:hover{
-        background-color: map-get($map: $colores, $key: 'rosa')
+        background-color: map-get($map: $colores, $key: 'rosa');
     }
-    // 2 COLUMNAS --------------------------------------------------------------------
-    .cajaSuperior{
-        background-color: white;
-        border-radius: 0.2rem;
-        h4{
-            color: map-get($map: $colores, $key: 'naranja');
+    table{
+        @include flex (center, center, wrap);
+        th{
+            background-color: map-get($map: $colores, $key: 'rosa2');
         }
-
-    }
-    .columna{
-        background-color: white;
-        border-radius: 0.2rem;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        table{
-            margin-left: auto;
-            margin-right: auto;
-            th{
-                background-color: map-get($map: $colores, $key: 'rosa2');
-            }
-            tr:nth-child(even) {
-                background-color: map-get($map: $colores, $key: 'rosa');
-            }
-        }
-        ol{
-            li{
-                list-style: decimal;
-                text-align: left;
-            }
-        }
-        iframe{
-            height: 75%;
-            width: auto;
+        tr:nth-child(even) {
+            background-color: map-get($map: $colores, $key: 'rosa');
         }
     }
-    // FORMULARIOS --------------------------------------------------------------------------
-    form{
-        div{
-            label{
-                display: block;
-            }
-            input{
-                height: 2rem;
-                border-color: map-get($map: $colores, $key: 'rosa');
-                border-style: solid;
-                margin: 0.5rem;
-            }
-            textarea{
-                @extend input;
-                height: 10rem;
-                width: 20rem;
-            }
-        }
-        input[type="submit"]{
-            @extend button;
-            width: 6rem;
+    ol{
+        li{
+            list-style: decimal;
+            text-align: left;
         }
     }
-    
+    ul{
+        li{
+            svg{
+                color: map-get($map: $colores, $key: 'rosa');
+            }
+        }
+    }
+    label{
+        display: block;
+    }
+    input{
+        height: 2rem;
+        width: 80%;
+        margin: 0.5rem;
+        border-color: map-get($map: $colores, $key: 'rosa');
+        border-style: solid;
+    }
+    textarea{
+        height: 6rem;
+        width: 80%;
+        border-color: map-get($map: $colores, $key: 'rosa');
+        border-style: solid;
+    }
+    input[type="submit"]{
+        @extend button;
+        width: 6rem;
+    }
+    iframe{
+        @extend input;
+        height: 50%;
+        width: 80%;
+    }
 }
 
 main a:link{
@@ -97,7 +101,8 @@ main a:link{
 //ASIDE-------------------------------------------------------------------------------
 aside{
     grid-area: aside;
-    width: 115%;
+    width: 85%;
+    height: 15%;
     background-color: rgba(236, 145, 162, 0.514);
     border-radius: 0.5rem;
     @include flex (center, flex-start, wrap);
@@ -105,4 +110,14 @@ aside{
         text-align: left;
         position: relative; top: 4rem; right: 1rem;
     }
+}
+
+//FOOTER---------------------------------------------------------------------------------------------
+footer{
+    grid-area: footer;
+    background: map-get($map: $colores, $key: 'verde2');
+    margin-top: 1rem;
+    padding: 0.5rem;
+    position: relative;
+    color: rgb(45, 61, 18);
 }

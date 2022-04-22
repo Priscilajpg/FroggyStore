@@ -1,28 +1,31 @@
 // TIPOGRAFIA -----------------------------------------------------------------------
+@mixin tipografia ($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
 h1{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 2.2rem;
+    @include tipografia(2.2rem, 700);
     margin: 0.5rem;
-    font-weight: 700;
-    color: map-get($map: $colores, $key: 'verde');
+    font-family: 'Quicksand', sans-serif;
+    color: map-get($map: $colores, $key: 'verde')
 }
+
 h2{
+    @include tipografia (1.5rem, 600);
     font-family: 'Quicksand', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 0.5rem;
-    color: map-get($map: $colores, $key: 'verde2');
+    color: map-get($map: $colores, $key: 'verde2')
 }
+
 h3{
+    @include tipografia(1.2rem, 600);
     font-family: 'Quicksand', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: map-get($map: $colores, $key: 'naranja');
+    color: map-get($map: $colores, $key: 'naranja')
 }
+
 h4{
+    @include tipografia(1rem, 600);
     font-family: 'Quicksand', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
 }
 
 li{

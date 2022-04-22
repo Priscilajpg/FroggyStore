@@ -1,40 +1,40 @@
-// VISTA MINI-MOBILE-------------------------------------------------------------------------------
-@media only screen and (max-width:300px) {
-    nav{
-        div{
-            .logoMobile{
-                width: 2rem;
-            }
-            input{
-                height: 2rem;
-                width: 100%;
-            }
-        }
-    }
-    aside{
-        display: none;
-    }
-}
-
 // VISTA MOBILE-------------------------------------------------------------------------------
-@media only screen and (min-width: 300px){
+@media only screen and (max-width: 768px){
     nav{
+        margin-bottom: 1rem;
         div{
             .logoMobile{
-                width: 4rem;
+                height: auto;
+                width: 15%;
             }
             input{
-                width: 6rem;
-                height: 2rem;
+                height: auto;
+                width: 30%;
+                margin: 1rem;
+            }
+        }
+    }
+    main{
+        background-color: white;
+        border-radius: 0.2rem;
+        margin: 0.5rem;
+        section{
+            article{
+                margin: 1rem;
+                img{
+                    height: auto;
+                    width: 70%;
+                }
             }
         }
     }
     aside{
         display: none;
     }
-    table{
-        th{
-            padding: 0.5rem;
+    footer{
+        @include flex (center, center, wrap);
+        li{
+            text-align: left;
         }
     }
 }
@@ -50,6 +50,7 @@
         );
     }
     header{
+        background-color: map-get($map: $colores, $key: 'rosa2');
         div{
             .buscador{
                 width: 8rem;
@@ -59,8 +60,56 @@
             }
         }
     }
+    main{
+        background-color: white;
+        section{
+            article{
+                margin: 1rem;
+                img{
+                    width: 15rem;
+                }
+            }
+        }
+        input{
+            width: 10rem;
+        }
+        table{
+            th{
+                padding: 0.5rem;
+            }
+        }
+        .fila{
+            display: flex;
+            .columna{
+                flex: 50%;
+                th{
+                    padding: 0.25rem 1rem;
+                }
+            }
+            .verticalLine{
+                border-left: 2px dotted pink;
+                height: 450px;
+                position: absolute;
+                left: 50%;
+                margin-left: -3px;
+                top: 50;
+            }
+        }
+    }
     aside{
         display: none;
+    }
+    footer{
+        @include flex (space-evenly, flex-start, wrap);
+        li{
+            text-align: left;
+        }
+        p{
+            position: absolute;
+            color: black;
+            bottom: 0;
+            margin: 0.2rem;
+        }
     }
 }
 
@@ -96,17 +145,44 @@
         "footer footer footer footer"
         );
     }
+    main{
+        section{
+            article{
+                img{
+                    width: 12.5rem;
+                }
+            }
+        }
+        input{
+            width: 10rem;
+        }
+            // 2 COLUMNAS --------------------------------------------------------------------
+        .cajaSuperior{
+            background-color: white;
+            border-radius: 0.2rem;
+            h4{
+                color: map-get($map: $colores, $key: 'naranja');
+            }
+        }
+        .columna{
+            background-color: white;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
     aside{
         display: flex;
     }
-    // PANTALLA CON 2 COLUMNAS ------------------------------------------------------------
-    .fila{
-        display: flex;
-        .columna{
-            flex: 50%;
-            th{
-                padding: 0.25rem 1rem;
-            }
+    footer{
+        @include flex (space-evenly, flex-start, wrap);
+        li{
+            text-align: left;
+        }
+        p{
+            position: absolute;
+            color: black;
+            bottom: 0;
+            margin: 0.2rem;
         }
     }
 }
