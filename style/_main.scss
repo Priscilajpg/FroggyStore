@@ -7,7 +7,6 @@ header{
 // NAVBAR---------------------------------------------------------------------------------------------
 nav{
     grid-area: nav;
-    @include flex (space-evenly, center, wrap);
     background-color: map-get($map: $colores, $key: 'rosa2');
     padding: 0.5rem 0rem;
 }
@@ -15,16 +14,15 @@ nav{
 // MAIN---------------------------------------------------------------------------------------------
 main{
     grid-area: main;
-    border-radius: 0.2rem;
-    grid-auto-columns: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
     // PANTALLA INDEX Y PRODUCTOS ------------------------------------------------------------------------
     section{
         @include flex (center,  flex-start, wrap);
         article{
-            background-color: white;
             box-shadow: map-get($map: $colores, $key: 'sombra');
             border-radius: 0.5rem;
-            margin: 0.5rem;
             img{
                 margin-bottom: 0.5rem;
                 border-radius: 0.5rem;
@@ -33,12 +31,11 @@ main{
     }
     button{
         background-color: map-get($map: $colores, $key: 'verde2');
-        color: white;
-        height: 2rem;
-        border-style: none;
-        border-radius: 0.3rem;
+        color: rgb(255, 255, 255);
         padding: 0rem 0.5rem;
         margin-bottom: 0.5rem;
+        border-style: none;
+        border-radius: 0.3rem;
         transition: 1s;
         transition-timing-function: ease-out;
     }
@@ -47,6 +44,7 @@ main{
     }
     table{
         @include flex (center, center, wrap);
+        margin-bottom: 1rem;
         th{
             background-color: map-get($map: $colores, $key: 'rosa2');
         }
@@ -62,8 +60,9 @@ main{
     }
     ul{
         li{
+            text-align: center;
             svg{
-                color: map-get($map: $colores, $key: 'rosa');
+                color: map-get($map: $colores, $key: 'rosa2');
             }
         }
     }
@@ -72,39 +71,38 @@ main{
     }
     input{
         height: 2rem;
-        width: 80%;
-        margin: 0.5rem;
+        width: 50%;
+        margin-bottom: 0.5rem;
         border-color: map-get($map: $colores, $key: 'rosa');
         border-style: solid;
     }
     textarea{
-        height: 6rem;
+        height: 8rem;
         width: 80%;
-        border-color: map-get($map: $colores, $key: 'rosa');
-        border-style: solid;
+        border: 2px solid map-get($map: $colores, $key: 'rosa');
     }
     input[type="submit"]{
         @extend button;
         width: 6rem;
     }
     iframe{
-        @extend input;
         height: 50%;
-        width: 80%;
+        width: 85%;
+        border-radius: 0.2rem;
     }
 }
 
-main a:link{
+main a{
     text-decoration: underline;
 }
 
 //ASIDE-------------------------------------------------------------------------------
 aside{
     grid-area: aside;
-    width: 85%;
-    height: 15%;
-    background-color: rgba(236, 145, 162, 0.514);
+    background-color: rgba(247, 151, 169, 0.582);
     border-radius: 0.5rem;
+    width: 85%;
+    height: 10%;
     @include flex (center, flex-start, wrap);
     li{
         text-align: left;
@@ -116,8 +114,9 @@ aside{
 footer{
     grid-area: footer;
     background: map-get($map: $colores, $key: 'verde2');
-    margin-top: 1rem;
-    padding: 0.5rem;
+    padding-top: 0.5rem;
     position: relative;
-    color: rgb(45, 61, 18);
+    li{
+        text-align: left;
+    }
 }
